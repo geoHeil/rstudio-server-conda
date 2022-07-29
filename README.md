@@ -30,3 +30,9 @@ R shared library (/usr/local/Caskroom/miniconda/base/envs/my_env/lib/R/lib/libR.
 ```
 
 How can this be fixed?
+
+## solved by
+
+https://github.com/conda-forge/r-base-feedstock/issues/215
+
+using linux/linux and not mapping osx shared libraries to linux container
