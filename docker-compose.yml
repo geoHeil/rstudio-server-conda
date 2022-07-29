@@ -1,0 +1,16 @@
+---
+version: "3.9"
+services:
+  rstudio:
+    image: rocker/rstudio:4.2.1
+    ports:
+      - "8787:8787"
+    environment:
+      - PASSWORD=rstudio
+      # user: rstudio
+      - CONDAENV=/usr/local/Caskroom/miniconda/base/envs/my_env
+    volumes:
+      # mount conda env into exactely the same path as on the host system - some paths are hardcoded in the env.
+      - /usr/local/Caskroom/miniconda/base/envs/my_env:/usr/local/Caskroom/miniconda/base/envs/my_env
+      - ./init2.sh:/init2.sh
+    command: ["/init2.sh"]

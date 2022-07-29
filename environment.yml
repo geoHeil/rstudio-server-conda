@@ -1,0 +1,12 @@
+# conda env create --force --name my_env -f environment.yml
+channels:
+  - r
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pandas
+
+  - r-essentials
+  - r-base>=4
+  - r-tidyverse
